@@ -1,0 +1,39 @@
+" Basics
+
+" Line numbering
+set number
+" Syntax highlighting
+syntax enable
+" tab size
+set tabstop=4
+set shiftwidth=4
+set expandtab
+" Mousesupport
+set mouse=a
+" improved search
+set incsearch
+set hlsearch
+" modern file explorer with netrw
+let g:netrw_banner=0
+let g:netrw_browse_split=4
+let g:netrw_altv=1
+let g:netrw_liststyle=3
+
+" custom status line (made by Chatgpt)
+set statusline=%F%m%r%h%w\ [FORMAT=%{&fileformat}]\ [TYPE=%Y]\ [POS=%l,%c]\ [LEN=%L]
+
+" Source language-specific configurations
+au BufRead,BufNewFile *.py source ~/.config/nvim/lang/python.vim
+au BufRead,BufNewFile *.js,*.jsx source ~/.config/nvim/lang/javascript.vim
+
+" Plugins
+" Try to load as far down as possible!
+call plug#begin('~/.local/share/nvim/plugged')
+
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'davidhalter/jedi-vim'
+
+call plug#end()
+
