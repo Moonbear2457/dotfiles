@@ -1,3 +1,1 @@
-require("tobster")
-print("hello")
-
+/home/tobi/dotfiles/config/nvim/init.lua

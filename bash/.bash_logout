@@ -1,0 +1,1 @@
+/home/tobi/dotfiles/.bash_logout
